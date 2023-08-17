@@ -1,6 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var miDiv = document.getElementById('miDiv');
-    miDiv.addEventListener('click', function() {
-        alert('Hola! Soy el div');
+
+function mostrarAlerta(event) {
+    event.stopPropagation();
+    alert("Hola!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const div = document.querySelector("div");
+    div.addEventListener("click", function() {
+        alert("Hola! Soy el div");
     });
 });
